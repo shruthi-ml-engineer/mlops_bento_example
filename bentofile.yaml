@@ -1,0 +1,13 @@
+service: "iris_service:svc"
+description: "A simple Iris classifier"
+labels:
+  owner: yourname
+  stage: dev
+include:
+  - "iris_model.pkl"
+python:
+  packages:
+    - scikit-learn
+    - numpy
+    - bentoml
+    - joblib
